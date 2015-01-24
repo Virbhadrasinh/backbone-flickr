@@ -1,2 +1,1 @@
-# backbone-flickr
-Flickr API integration using Backbonejs
+# Flickr API integration using Backbonejs

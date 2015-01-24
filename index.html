@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>flickr</title>
+	<link rel="stylesheet" type="text/css" href="app/css/flickr.css">
+	<script type="text/javascript" src="./libraries/jquery/jquery.js"></script>
+	<script type="text/javascript" src="./libraries/underscore/underscore.js"></script>
+	<script type="text/javascript" src="./libraries/backbone/backbone.js"></script>
+	<script type="text/javascript">
+		var FL = {
+			app : {},
+			search : {},
+			gallery : {},
+			images : {}
+		};
+	</script>
+	<script type="text/javascript" src="./app/modules/utility/utility.js"></script>
+</head>
+<body>
+	<div class="app-container"></div>
+	
+	<script type="text/html" id="app-template">
+		<div class="flickr-search-container"></div>
+		<div class="flickr-grid-container" style="display: none;"></div>
+		<div class="modal-backdrop" style="display:none;"></div>
+		<div class="flickr-image-container" style="display: none;"></div>
+		<!--<div class="modify-search">Currently showing results for : </div>-->
+	</script>
+	
+	<script type="text/html" id="search-template">
+		<input type="text" class="js-search-tag">
+		<button type="button" class="js-search">Search</button>
+	</script>
+	
+	<script type="text/html" id="gallery-template">
+		<div class="prev-next-container">
+			<span class="prev">PREV</span>
+			<span class="next">NEXT</span>
+		</div>
+		<% _.each(images,function(image){ %>
+        	<div>
+				<img data-index="<%=image.index %>" src="https://farm<%=image.farm %>.staticflickr.com/<%=image.server %>/<%=image.id %>_<%=image.secret %>_n.jpg" alt="<%=image.title %>" title="<%=image.title %>">
+			</div>
+    	<% }) %>
+		<div class="prev-next-container">
+			<span class="prev">PREV</span>
+			<span class="next">NEXT</span>
+		</div>
+	</script>
+	
+	<script type="text/html" id="images-template">
+		<div class="image-content">
+			<div class="prev">PREV</div>
+			<img src="" alt="">
+			<div class="next">NEXT</div>
+			<div class="close">X</div>
+		</div>
+	</script>
+	
+	<script type="text/javascript" src="./app/modules/images/view.js"></script>
+
+	<script type="text/javascript" src="./app/modules/gallery/model.js"></script>
+	<script type="text/javascript" src="./app/modules/gallery/collection.js"></script>
+	<script type="text/javascript" src="./app/modules/gallery/view.js"></script>
+	
+	<script type="text/javascript" src="./app/modules/search/model.js"></script>
+	<script type="text/javascript" src="./app/modules/search/view.js"></script>
+	<script type="text/javascript" src="./app/modules/app/view.js"></script>
+	
+	<script type="text/javascript" src="./app/flickr.js"></script>
+</body>
+</html>
