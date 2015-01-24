@@ -1,0 +1,103 @@
+html, body {
+	height: 100%;
+	margin: 0px;
+	overflow-x: hidden;
+}
+
+.flickr-search-container {
+	text-align: center;
+	top: 50%;
+	position: absolute;
+	width: 99%;
+}
+
+.flickr-grid-container {
+	width: 1050px;
+	margin: 0 auto;
+}
+
+.flickr-grid-container div {
+	float: left;
+	height: 250px;
+	width: 250px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+}
+
+.flickr-grid-container div:last-child, .flickr-grid-container div:first-child {
+	margin-bottom: 0px;
+	margin-left: 0px;
+	width: 100%;
+	height: 25px;
+}
+
+.flickr-grid-container div img {
+	height: 250px;
+	width: 250px;
+}
+
+.prev-next-container .prev {
+	float: left;
+	padding-left: 10px;
+	cursor: pointer;
+}
+
+.prev-next-container .next {
+	float: right;
+	padding-right: 10px;
+	cursor: pointer;
+}
+
+.modal-backdrop {
+	background-color: #000;
+	opacity: .9;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}
+
+.flickr-image-container {
+	position: absolute;
+	top: 50px;
+	width: 100%;
+	z-index: 9999;
+	color: white;
+	background-color: white;
+}
+
+.image-content {
+	height: 0px;
+	text-align: center;
+}
+
+.image-content img {
+	max-width: 800px;
+	max-height: 550px;
+}
+
+.image-content .prev {
+	position: absolute;
+	top: 275px;
+	left: 230px;
+	cursor: pointer;
+}
+
+.image-content .next {
+	position: absolute;
+	top: 275px;
+	right: 230px;
+	cursor: pointer;
+}
+
+.image-content .close {
+	position: fixed;
+	top: 15px;
+	right: 15px;
+	width: 25px;
+	border-radius: 12px;
+	background-color: white;
+	color: black;
+	font-weight: bold !important;
+	font-size: 20px;
+	cursor: pointer;
+}
