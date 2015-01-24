@@ -101,14 +101,3 @@ html, body {
 	font-size: 20px;
 	cursor: pointer;
 }
-
-.modify-search {
-	position: fixed;
-	top: 0px;
-	left: 159px;
-	width: 100%;
-	z-index: 1000;
-	color: black;
-	width: 1050px;
-	text-align: left;
-}
